@@ -1,10 +1,15 @@
 * {
   box-sizing: border-box;
 }
-ul,li {
+ul {
   list-style-type: none;
+  text-decoration: none;
   margin: 0;
   padding: 0;
+}
+
+li {
+  list-style: none;
 }
 
 a {
