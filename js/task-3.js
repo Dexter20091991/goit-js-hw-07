@@ -1,15 +1,7 @@
-function filterArray(numbers, value) {
-  const filterForNumbers = [];
-  for (const number of numbers) {
-    if (number > value) {
-      filterForNumbers.push(number);
-    }
-  }
-  return filterForNumbers;
-}
+const nameInput = document.querySelector("#name-input");
+const greetingSpan = document.querySelector("#name-output");
 
-console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
-console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
-console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
-console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
-console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
+nameInput.addEventListener("input", () => {
+    const name = nameInput.value.trim();
+    greetingSpan.textContent = name || "Anonymous";   
+});
